@@ -1,0 +1,27 @@
+[
+    {
+        "instruction": "Given an iput, it can be associated with the ESG problem?",
+        "input": "Reduction water",
+        "output": "1"
+    },
+    {
+        "instruction": "Given an iput, it can be associated with the ESG problem?",
+        "input": "Carbon electricity",
+        "output": "0"
+    },
+    {
+        "instruction": "Given an iput, it can be associated with the ESG problem?",
+        "input": "Reduction co2",
+        "output": "1"
+    },
+    {
+        "instruction": "Given an iput, it can be associated with the ESG problem?",
+        "input": "Reduction pollution",
+        "output": "1"
+    },
+    {
+        "instruction": "Given an iput, it can be associated with the ESG problem?",
+        "input": "Reduction co2 but using 100% of carbon electricity",
+        "output": "0"
+    }
+]

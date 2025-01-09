@@ -1,5 +1,5 @@
 # Welcome to ESG Fine-tuning Repository
-***Birti Mattia***  
+***Birti Mattia***  - ***Osborne Francesco*** - ***Maurino Andrea***
 This repository is dedicated to the fine-tuning of various Language Models (LLMs), including Llama, Llama2, Llama3, Gemma2B, Gemma7B, RecurrentGemma2B and Mistral, with a specific focus on enhancing their efficiency for exploring ESG (Environment, Social, and Governance) related topics.
 
 ## Basic Info:
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ```bash
 python3 finetune.py --model_type llama_3B --data "./data/train/data.json" --adapter "lora" --output_dir "output/nameFolder" --EvalFolder "nameFolder" --epochs 20
 ```
-* **gemma_7B** is the only notebook that implements both crossvalidation and normal training. You can select the mode via the keyword *--modality*
+* **gemma_7B** and **llama2_7B** are the only notebooks that implements both crossvalidation and normal training. You can select the mode via the keyword *--modality*
     * *--modality "normal"*
     * *--modality "cross"*
     * *--modality "crossANDnormal"*
@@ -53,7 +53,7 @@ python3 inference.py --model_type llama_3B --data "./data/train/data.json" --ada
 ## Repository:
 
 ### finetune.py
-Script used to launch finetuning of the selected model.Contains all passed and default parameters.  
+Script used to launch finetuning of the selected model. Contains all passed and default parameters.  
 *Output -> output/name_model/*  
 ![Output:](img/output_lama.png)
 
@@ -85,3 +85,6 @@ We start from a **.csv** to obtain the final **.json**.
 
 ### eval/evaluation.ipynb
 Notebook used to calculate and compare the evaluation metrics of the different models.
+
+### results
+Folder containing all the .csv obtained for the different experiments.

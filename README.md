@@ -1,5 +1,5 @@
 # Welcome to ESG Fine-tuning Repository
-***Birti Mattia***  - ***Osborne Francesco*** - ***Maurino Andrea***
+***Birti Mattia***  - ***Osborne Francesco*** - ***Maurino Andrea***  
 This repository is dedicated to the fine-tuning of various Language Models (LLMs), including Llama, Llama2, Llama3, Gemma2B, Gemma7B, RecurrentGemma2B and Mistral, with a specific focus on enhancing their efficiency for exploring ESG (Environment, Social, and Governance) related topics.
 
 ## Basic Info:

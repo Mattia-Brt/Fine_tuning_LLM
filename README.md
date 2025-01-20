@@ -30,6 +30,9 @@ pip install -r requirements.txt
 
 ### Dataset:
 [Train Dataset example here](data/example_classify.json)
+[Train with original data here](data/train_o.json)
+[Train with original and syntetic data here](data/train_o+s.json)
+[Test data here](data/test.json)
 
 
 ## Run 

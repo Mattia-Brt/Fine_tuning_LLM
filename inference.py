@@ -9,6 +9,8 @@ from core.classify_models.gemma_7B import GEMMAclass_7B
 from core.classify_models.gemma_2B import GEMMAclass_2B
 from core.classify_models.recurrentGemma_2B import RecurrentGEMMAclass_2B
 from core.classify_models.mistral_8x7B import MISTRALclass_8x7B
+from core.classify_models.esgBERT import esgBERTclass
+
 
 
 if __name__ == "__main__":
@@ -19,7 +21,7 @@ if __name__ == "__main__":
 
     # base
     parser.add_argument('--data', default=None, help="The DIR of test data", type=str)
-    parser.add_argument('--model_type', default="llama_3B", choices=['llama_3B', 'llama2_7B', 'llama3_8B', 'mistral', 'mistral_8x7B', 'gemma_7B', 'gemma_2B', 'recurrentGemma_2B'])
+    parser.add_argument('--model_type', default="llama_3B", choices=['esgBERT', 'llama_3B', 'llama2_7B', 'llama3_8B', 'mistral', 'gemma_7B', 'gemma_2B', 'recurrentGemma_2B'])
     parser.add_argument('--labels', default="[\"0\", \"1\"]",
                         help="Labels to classify, only used when task_type is classify")
     parser.add_argument('--adapter_weights', default="None", type=str, help="The DIR of adapter weights") #mettere la cartella output/dir dove sta salvato il modello
@@ -64,6 +66,8 @@ if __name__ == "__main__":
         llm = GEMMAclass_2B()
     elif args.model_type == "recurrentGemma_2B":
         llm = RecurrentGEMMAclass_2B()
+    elif args.model_type == "esgBERT":
+        llm = esgBERTclass()
     else:
         print("model_type should be llama_3B or llama2_7B or llama3_8B or mistral or gemma_7B or recurrentGemma_2B")
         sys.exit(-1)

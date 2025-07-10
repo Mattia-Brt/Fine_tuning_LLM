@@ -10,6 +10,8 @@ from core.classify_models.gemma_7B import GEMMAclass_7B
 from core.classify_models.gemma_2B import GEMMAclass_2B
 from core.classify_models.recurrentGemma_2B import RecurrentGEMMAclass_2B
 from core.classify_models.mistral_8x7B import MISTRALclass_8x7B
+from core.classify_models.esgBERT import esgBERTclass
+
 
 
 
@@ -26,7 +28,7 @@ if __name__ == "__main__":
     #take here parameter from input
     # base
     parser.add_argument('--data', type=str, default="data/train/", help='the data used for instructing tuning')
-    parser.add_argument('--model_type', default="llama_3B", choices=['llama_3B', 'llama2_7B', 'llama3_8B', 'mistral', 'mistral_8x7B', 'gemma_7B', 'gemma_2B', 'recurrentGemma_2B'])
+    parser.add_argument('--model_type', default="llama_3B", choices=['esgBERT', 'llama_3B', 'llama2_7B', 'llama3_8B', 'mistral', 'gemma_7B', 'gemma_2B', 'recurrentGemma_2B'])
     parser.add_argument('--labels', default="[\"0\", \"1\"]", help="Labels to classify") #aggiungila sotto perché non c'è
     parser.add_argument('--output_dir', default="output/", type=str, help="The DIR to save the model")
     parser.add_argument('--input_dir', default="default", type=str, help="The DIR get the weights of a pretrained model")
@@ -102,6 +104,8 @@ if __name__ == "__main__":
         llm = GEMMAclass_2B()
     elif args.model_type == "recurrentGemma_2B":
         llm = RecurrentGEMMAclass_2B()
+    elif args.model_type == "esgBERT":
+        llm = esgBERTclass()
     else:
         print("model_type should be llama_3B or llama2_7B or llama3_8B or mistral or gemma_7B or recurrentGemma_2B")
         sys.exit(-1)
